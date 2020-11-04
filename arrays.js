@@ -112,6 +112,170 @@
 */
 
 
+/*
+    //filter()
+    //used to create the new array based on condition
+    let arr = [100,200,300,400,500];
+    console.log(
+        arr.filter((element,index)=>{
+            return element>=300;
+        })
+    );    //[ 300, 400, 500 ]
+
+
+    console.log(
+        [10,20,30,40,50].map((element,index)=>{
+            return element*100;
+        }).filter((element,index)=>{
+            return element<=2000;
+        })
+    );   //[ 1000, 2000 ]
+*/
+
+
+/*
+    //reduce()
+    //it is used to find the sum of array elements
+    console.log(
+        [1,2,3,4,5].reduce((firstElement,nextElement)=>{
+            return firstElement+nextElement;
+        })
+    );    //15
+
+    console.log( [10,20,30,40,50].map((element,index)=>{
+        return element/10;
+    }).filter((element,index)=>{
+        return element>=4;
+    }).reduce((firstValue,nextValue)=>{
+        return firstValue+nextValue;
+    }) );     //9
+*/
+
+
+/*
+    //reduceRight()
+    //it is used to find the summation from right to left
+    console.log(
+        ["ReactJS","to","welcome"].reduceRight((firstElement,nextElement)=>{
+            return firstElement+" "+nextElement;
+        })
+    );    //welcome to ReactJS
+*/
+
+
+/*
+    let arr = [10,20,30,40,50,60,70,80,90,100];
+
+    //[60,70,80,90,100,10,20,30,40,50]
+    //[6,7,8,9,10,1,2,3,4,5]
+    //[40,15]
+    //[15,40]
+
+    let callback = (element,index)=>{
+        return element/10;
+    };
+
+    let addCallBack = (firstElement,nextElement)=>{
+        return firstElement+nextElement;
+    };
+
+    console.log(
+        [arr.slice(5).map(callback).reduce(addCallBack), 
+        arr.slice(0,5).map(callback).reduce(addCallBack)].reverse()
+    );
+*/
+
+
+//copyWithin()
+let arr1 = [10,20,30,40,50,60,70,80,90,100];
+arr1.copyWithin(2);
+console.log(arr1);   //[10,20,10,20,30,40,50,60,70,80]
+
+
+let arr2 = [10,20,30,40,50,60,70,80,90,100];
+arr2.copyWithin(5);
+console.log(arr2);  //[10,20,30,40,50,10,20,30,40,50]
+
+
+let arr3 = [10,20,30,40,50,60,70,80,90,100];
+arr3.copyWithin(0);
+console.log(arr3);   //[10,20,30,40,50,60,70,80,90,100]
+
+
+let arr4 = [10,20,30,40,50,60,70,80,90,100];
+arr4.copyWithin(2,5);
+console.log(arr4);    //[10,20,60,70,80,90,100,80,90,100]
+
+
+let arr5 = [10,20,30,40,50,60,70,80,90,100];
+arr5.copyWithin(3,8);
+console.log(arr5);   //[10,20,30,90,100,60,70,80,90,100]
+
+
+let arr6 = [10,20,30,40,50,60,70,80,90,100];
+arr6.copyWithin(2,-4);
+console.log(arr6);    //[10,20,70,80,90,100,70,80,90,100]
+
+let arr7 = [10,20,30,40,50,60,70,80,90,100];
+arr7.copyWithin(2,4,7);
+console.log(arr7);    //[10,20,50,60,70,60,70,80,90,100]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
