@@ -185,40 +185,184 @@
     );
 */
 
-
-//copyWithin()
-let arr1 = [10,20,30,40,50,60,70,80,90,100];
-arr1.copyWithin(2);
-console.log(arr1);   //[10,20,10,20,30,40,50,60,70,80]
-
-
-let arr2 = [10,20,30,40,50,60,70,80,90,100];
-arr2.copyWithin(5);
-console.log(arr2);  //[10,20,30,40,50,10,20,30,40,50]
+/*
+    //copyWithin()
+    let arr1 = [10,20,30,40,50,60,70,80,90,100];
+    arr1.copyWithin(2);
+    console.log(arr1);   //[10,20,10,20,30,40,50,60,70,80]
 
 
-let arr3 = [10,20,30,40,50,60,70,80,90,100];
-arr3.copyWithin(0);
-console.log(arr3);   //[10,20,30,40,50,60,70,80,90,100]
+    let arr2 = [10,20,30,40,50,60,70,80,90,100];
+    arr2.copyWithin(5);
+    console.log(arr2);  //[10,20,30,40,50,10,20,30,40,50]
 
 
-let arr4 = [10,20,30,40,50,60,70,80,90,100];
-arr4.copyWithin(2,5);
-console.log(arr4);    //[10,20,60,70,80,90,100,80,90,100]
+    let arr3 = [10,20,30,40,50,60,70,80,90,100];
+    arr3.copyWithin(0);
+    console.log(arr3);   //[10,20,30,40,50,60,70,80,90,100]
 
 
-let arr5 = [10,20,30,40,50,60,70,80,90,100];
-arr5.copyWithin(3,8);
-console.log(arr5);   //[10,20,30,90,100,60,70,80,90,100]
+    let arr4 = [10,20,30,40,50,60,70,80,90,100];
+    arr4.copyWithin(2,5);
+    console.log(arr4);    //[10,20,60,70,80,90,100,80,90,100]
 
 
-let arr6 = [10,20,30,40,50,60,70,80,90,100];
-arr6.copyWithin(2,-4);
-console.log(arr6);    //[10,20,70,80,90,100,70,80,90,100]
+    let arr5 = [10,20,30,40,50,60,70,80,90,100];
+    arr5.copyWithin(3,8);
+    console.log(arr5);   //[10,20,30,90,100,60,70,80,90,100]
 
-let arr7 = [10,20,30,40,50,60,70,80,90,100];
-arr7.copyWithin(2,4,7);
-console.log(arr7);    //[10,20,50,60,70,60,70,80,90,100]
+
+    let arr6 = [10,20,30,40,50,60,70,80,90,100];
+    arr6.copyWithin(2,-4);
+    console.log(arr6);    //[10,20,70,80,90,100,70,80,90,100]
+
+    let arr7 = [10,20,30,40,50,60,70,80,90,100];
+    arr7.copyWithin(2,4,7);
+    console.log(arr7);    //[10,20,50,60,70,60,70,80,90,100]
+*/
+
+
+/*
+    //fill()
+    //it is used to replace old values with new values
+    let arr = [1,2,3,4,5];
+    console.log( arr.fill(10) );        //[ 10, 10, 10, 10, 10 ]
+    console.log( arr.fill(20,2) );      //[ 10, 10, 20, 20, 20 ]
+    console.log( arr.fill(30,1,3) );    //[ 10, 30, 30, 20, 20 ]
+*/
+//findIndex()
+//to know index of particular element
+
+/*
+    let arr = [10,20,30,40,50];
+    console.log(
+        arr.findIndex((element,index)=>{
+            return element === 30;
+        })
+    );     //2
+    console.log(
+        arr.findIndex((element,index)=>{
+            return element === 50;
+        })
+    );     //4
+
+    arr.splice(arr.findIndex((element,index)=>{
+        return element === 20;
+    }),1);
+    console.log(arr);    //[ 10, 30, 40, 50 ]
+
+    arr.splice(arr.findIndex((element,index)=>{
+        return element === 40;
+    }),1);
+    console.log(arr);    //[ 10, 30, 50 ]
+
+
+
+let arr = [{"p_id":111,"p_name":"p_one","p_cost":10000},
+            {"p_id":222,"p_name":"p_two","p_cost":20000},
+            {"p_id":333,"p_name":"p_three","p_cost":30000},
+            {"p_id":444,"p_name":"p_four","p_cost":40000},
+            {"p_id":555,"p_name":"p_five","p_cost":50000}];
+
+arr.splice(arr.findIndex((element,index)=>{
+    return element.p_id === 333;
+}),1);            
+console.log(arr);
+*/
+
+
+/*
+    //indexOf()
+    //won't create indexes to repeated elements
+    let arr = [10,20,10,30,10,20];
+    arr.forEach((element,index)=>{
+        console.log(arr.indexOf(element));
+    });   //0 1 0 3 0 1
+
+    let arr2 = [10,100,1000,10,1000,55,10,100,55,40,10,1000];
+    arr2.forEach((element,index)=>{
+        console.log( arr2.indexOf(element) );
+    });  //0 1 0 1 2 0 2 5 0 1 5 9 0 2
+*/
+
+
+
+let arr = [10,20,30,10,20,30];
+console.log(
+    arr.filter((element,index)=>{
+        return arr.indexOf(element) === index;
+    })
+);    //[ 10, 20, 30 ]
+
+
+let arr1 = [-1,10,-1,16,20,16,28];
+console.log(
+    arr1.filter((element,index)=>{
+        return arr1.indexOf(element) == index;
+    })
+);   //[ -1, 10, 16, 20, 28 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
