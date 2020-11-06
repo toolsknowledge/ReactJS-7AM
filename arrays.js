@@ -286,21 +286,175 @@ console.log(arr);
 */
 
 
+/*
+    let arr = [10,20,30,10,20,30];
+    console.log(
+        arr.filter((element,index)=>{
+            return arr.indexOf(element) === index;
+        })
+    );    //[ 10, 20, 30 ]
 
-let arr = [10,20,30,10,20,30];
+
+    let arr1 = [-1,10,-1,16,20,16,28];
+    console.log(
+        arr1.filter((element,index)=>{
+            return arr1.indexOf(element) == index;
+        })
+    );   //[ -1, 10, 16, 20, 28 ]
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    //flat()
+    //it is used to convert the multi dimensional array to single dimensional array
+    let arr = [1,[2],3,4];
+    console.log( arr.flat(1) );    //[ 1, 2, 3, 4 ]
+
+    let arr1 = [10,20,[[[[[[[[[30]]]]]]]]],40,[[[[50]]]]];
+    console.log(
+        arr1.flat(Infinity).reduce((firstValue,secondValue)=>{
+            return firstValue + secondValue;
+        })
+    );
+*/
+
+
+/*
+    //flatMap()
+    let arr1 = [1,2,3];
+    let arr2 = ["one","two","three"];
+
+    //[ [1,"one"],[2,"two"],[3,"three"] ]
+    console.log(
+        arr1.map((element,index)=>{
+        return [element,arr2[index]]; 
+        }).flat(1)
+    );   //[ 1, 'one', 2, 'two', 3, 'three' ]
+
+
+    console.log(
+        arr1.flatMap((element,index)=>{
+        return [element,arr2[index]]; 
+        })
+    );   //[ 1, 'one', 2, 'two', 3, 'three' ]
+*/
+
+/*
+    //sort()
+    //it is used to sort the elements either ascending order or decending order
+    let arr1 = [10,50,20,40,30];
+    console.log(
+        arr1.sort((num1,num2)=>{
+            return num1-num2;
+        })
+    );     //[ 10, 20, 30, 40, 50 ]
+
+    console.log(
+        arr1.sort((num1,num2)=>{
+            return num2-num1;
+        })
+    );    //[ 50, 40, 30, 20, 10 ]
+
+    //num1-num2   (ascending order)
+    //num2-num1   (decending order)
+
+
+    console.log(
+        [9,-1,2,6,2].sort((num1,num2)=>{
+            return num1-num2;
+        })[2]
+    );  
+    //[-1,2,2,6,9]
+
+    console.log(
+        [9,-1,2,6,2].sort((num1,num2)=>{
+            return num2-num1;
+        })[1]
+    );  //6
+*/
+
+
+//reverse()
+//it is used to reverse the array elements
+let arr1 = [10,20,30,40,50];
 console.log(
-    arr.filter((element,index)=>{
-        return arr.indexOf(element) === index;
-    })
-);    //[ 10, 20, 30 ]
+    arr1.reverse()
+);    //[ 50, 40, 30, 20, 10 ]
 
 
-let arr1 = [-1,10,-1,16,20,16,28];
 console.log(
-    arr1.filter((element,index)=>{
-        return arr1.indexOf(element) == index;
-    })
-);   //[ -1, 10, 16, 20, 28 ]
+    ["Angular","ReactJS","VueJS"].reverse()
+);
+
+console.log(
+    Array.from("Hello").reverse().join("")
+);
+
+//['H','e','l','l','o']
+//[ 'o', 'l', 'l', 'e', 'H' ]
+//olleH
+
+
+console.log(
+    ["Angular","React","VueJS"].map((element,index)=>{
+        return Array.from(element).reverse().join("")
+    }).reverse()
+);
+
+//["ralugnA","tcaeR","SJeuV"]
+//["SJeuV","tcaeR","ralugnA"]
+
+
+
+
+
+
+
 
 
 
