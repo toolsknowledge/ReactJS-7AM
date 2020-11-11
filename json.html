@@ -83,17 +83,20 @@
 -->
 
 
-<!--
+
+
 <script>
     let obj = {
-        key1 : "value1",
+        "key1" : "value1",
         "key2" : "value2",
-        key3 : "value3" 
+        "key3" : "value3",
+        "key4" : ()=>{ return "Hello" }
     };
     console.log( Object.keys(obj) );   //["key1", "key2", "key3"]
     console.log( Object.values(obj) ); //["value1", "value2", "value3"]
+    console.log( obj.key4() );
 </script>
--->
+
 
 <!--
 <script>
@@ -103,6 +106,8 @@
 </script>
 -->
 
+
+<!--
 <script>
     let obj = {
         oracle : ()=>{ return "oracle connection soon" },
@@ -111,7 +116,7 @@
     };
     console.log( obj.oracle(), obj.mysql(), obj.mongodb() );
 </script>
-
+-->
 
 
 
