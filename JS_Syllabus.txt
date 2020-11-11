@@ -1,0 +1,44 @@
+Syllabus of JavaScript (ES6 to ES11)
+------------------------------------
+1) variables (var,let & const) (c)
+
+2) Functions   (c)
+	=> Named Functions
+	=> Anonymous Functions / Arrow Functions
+	=> Default Parameters in Functions
+	=> Rest Parameters in Functions
+	=> Constructor Functions
+	=> Optional Parameters in Functions
+
+3) Prototype   (c)
+	=> Prototype Chaining
+
+4) JSON   (c)
+
+5) Promises
+
+6) AJAX Calls   (c)
+
+7) CallBacks in JavaScript
+
+8) Clousers in JavaScript
+
+9) IIFE (Immidiate Invokable Functional Expressions)   (c)
+
+10) Data Structures
+	=>Map
+	=>WeakMap
+	=>Set
+	=>WeakSet
+
+11) Event Bubbling & Event Capturing
+
+12) async & await keywords
+
+13) Regular Expressions
+
+14) call(), apply(), bind()
+
+15) Debouncing
+
+16) Currying

@@ -304,51 +304,6 @@ console.log(arr);
 */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
     //flat()
     //it is used to convert the multi dimensional array to single dimensional array
@@ -419,6 +374,7 @@ console.log(arr);
 */
 
 
+/*
 //reverse()
 //it is used to reverse the array elements
 let arr1 = [10,20,30,40,50];
@@ -451,108 +407,184 @@ console.log(
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
+
+
+/*
+    //delete
+    let arr = [10,20,30,40,50];
+    console.log( arr.length );
+    delete arr[2];
+    console.log(arr.length);   //5
+    console.log(arr);          //[ 10, 20, <1 empty item>, 40, 50 ]
+*/
+
+/*
+    //find()
+    //to check particular element present in array or not
+    let arr = [10,20,30,40,50];
+    console.log( arr.find((element,index)=>{
+        return element === 30;
+    }) );   //30
+    console.log(
+        arr.find((element,index)=>{
+            return element === 3;
+        })
+    );   //undefined
+*/
+
+/*
+    //includes()
+    //it is used to search particular element present in array
+    //this function is boolean function
+    let arr = [10,20,30,40,50];
+    console.log(
+        arr.includes(30)
+    );   //true
+    console.log(
+        arr.includes(1)
+    );   //false
+
+    console.log(
+        ["Angular","NodeJS","ReactJS"].includes("NodeJS")
+    );   //true
+*/
+
+/*
+    //some()
+    //if atleast one element satisfies the condition, it will return true itherwise false
+    console.log(
+        [10,20,30,40,50].some((element,index)=>{
+            return element<10;
+        })
+    );   //false
+    console.log(
+        [10,20,30,40,50].some((element,index)=>{
+            return element<=10;
+        })
+    );  //true
+*/
+
+/*
+    //every()
+    //if all elements satisfies the condition then it will return true otherwise false
+    let arr = [10,20,30,40,50];
+    console.log( arr.every((element,index)=>{
+        return element<60;
+    }) );   //true
+    console.log( arr.every((element,index)=>{
+        return element<50;
+    }) );   //false
+*/
+/*
+    //repeat()
+    //repeat() function used to repeat the string
+    console.log("Hello \n".repeat(5));
+    //console.log(["hello"].repeat(5));
+*/
+
+/*
+    //trim()
+    //used to remove the white spaces at begining and end of string
+
+    //trimStart()
+    //used to remove white spaces at begining of string
+
+
+    //trimEnd()
+    //used to remove the white spaces at end of string
+    let str = " Hello ";
+    console.log( str.length );    //7
+    console.log( str.trim().length );   //5
+    console.log( str.trimStart().length );  //6
+    console.log( str.trimEnd().length );    //6
+*/
+
+
+
+/*
+    //padStart()
+    //padEnd()
+    //fill the recomended places with some characters
+    let str = "Hello";
+    console.log( str.padStart(20,"*") );
+    console.log( str.padEnd(20,"#") );
+    console.log( str.padStart(10,"*").padEnd(15,"*") );
+*/
+
+/*
+    //entries()
+    //it is used to convert JSON Object to JSON Array
+    let obj = {"key1":"hello_1", "key2":"hello_2", "key3":"hello_3"};
+    console.log(Object.entries(obj).flat(1));   //[ 'key1', 'hello_1', 'key2', 'hello_2', 'key3', 'hello_3' ]
+
+    //fromEntries()
+    //it is used to convert array to object
+    let arr = [["key1","Hello_1"]];
+    console.log( Object.fromEntries(arr) );  //{ key1: 'Hello_1' }
+*/
+
+/*
+    //concat()
+    //it is used to concat the arrays
+    let arr1 = ["Angular10"];
+    let arr2 = ["NodeJS"];
+    let arr3 = ["MongoDB"];
+    console.log(
+        arr1.concat(arr2,arr3)
+    );   //[ 'Angular10', 'NodeJS', 'MongoDB' ]
+    console.log(arr1,arr2,arr3);  //[ 'Angular10' ] [ 'NodeJS' ] [ 'MongoDB' ]
+*/
+
+/*
+    let arr1 = [10,20];
+    let arr2 = [30,40];
+    let arr3 = [50,60];
+    console.log([...arr1,...arr2,...arr3]);   //[ 10, 20, 30, 40, 50, 60 ]
+    console.log(arr1,arr2,arr3);   //[ 10, 20 ] [ 30, 40 ] [ 50, 60 ]
+*/
+
+
+/*
+    let str = "Hello";
+    console.log( Array.from(str).reverse().toString().replace(/,/g,""));
+
+    //[ 'H', 'e', 'l', 'l', 'o' ]
+    //[ 'o', 'l', 'l', 'e', 'H' ]
+    //o,l,l,e,H 
+    //ol,l,e,H 
+    //olleH   
+*/
+
+/*
+    let str = "welcome to react js";
+    console.log( str.split(" ") );   //[ 'welcome', 'to', 'react', 'js' ]
+
+let str = "Hello.welcome,to,Node.JS";
+console.log( str.replace(/,/g,".").split(".") );   //[ 'Hello', 'welcome', 'to', 'Node', 'JS' ]
+*/
+
+/*
+    let str = "Welcome";
+    console.log( str.substr(1,3) );    //elc
+    console.log( str.substr(3,4) );    //come
+*/
+
+
+/*
+    let str = "Welcome to ReactJS";
+    console.log( str.substring(0,7) );    //Welcome
+    console.log( str.substring(8,10) );   //to
+    console.log( str.substring(11) );     //ReactJS  
+*/
+
+/*
+    let arr = [10,20,10,20,10,30,40,10,20];
+    console.log( arr.lastIndexOf(10) );   //7
+    console.log( arr.lastIndexOf(20) );   //8
+    console.log( arr.lastIndexOf(30) );   //5
+    console.log( arr.lastIndexOf(1) );    //-1
+*/
 
 
 

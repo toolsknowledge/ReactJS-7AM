@@ -1,0 +1,151 @@
+<!--
+    JSON
+    ====
+        JSON Stands for Java Script Object Notation.
+
+        JSON also called as JAvaScript Objects.
+
+        JSON, used to transfer the data over the Network.
+
+        JSON is ligth weight compared to XML.
+
+        JSON Parsing(Reading) is Eazy.
+
+        we can store the data in the form of a "key" & "value" pairs .
+        
+        Syntax.
+        
+        Objects ==>  {}
+
+        Arrays  ==>  []
+
+        data    ==>  key & value pairs
+
+                     key & value separated by using ":"
+
+                     key & value pairs separated by using ","
+
+-->
+
+<!--
+<script>
+    let obj = {
+        "sub_one":"ReactJS",
+        "sub_two":"NodeJS",
+        "sub_three": "MongoDB"
+    };
+    console.log( obj.sub_one,
+                 obj.sub_two,
+                 obj.sub_three );   //ReactJS NodeJS MongoDB
+</script>
+-->
+
+
+<!--
+<script>
+    let obj = {"key1":"Hello_1",
+                "key2":"Hello_2",
+                "key3" : "Hello_3"};
+    //ES6   for...in
+    for(let key in obj){
+        if(key !="key1"){
+            console.log( key, obj[key], typeof(key) )
+        };
+    }
+</script>
+-->
+
+<!--
+<script>
+    let obj = {
+        login : login(),
+        logout : logout(),
+        setCredentials : setCredentials(),
+        clearCredentials : clearCredentials()
+    };
+    function login(){
+        return "welcome to login module";
+    };
+    function logout(){
+        return "welcome to logout module";
+    };
+    function setCredentials(){
+        return "welcome to setCredentials module";
+    };
+    function clearCredentials(){
+        return "welcome to clearCredentials module";
+    };
+    console.log( obj.login,
+                 obj.logout,
+                 obj.setCredentials,
+                 obj.clearCredentials );
+</script>
+-->
+
+
+<!--
+<script>
+    let obj = {
+        key1 : "value1",
+        "key2" : "value2",
+        key3 : "value3" 
+    };
+    console.log( Object.keys(obj) );   //["key1", "key2", "key3"]
+    console.log( Object.values(obj) ); //["value1", "value2", "value3"]
+</script>
+-->
+
+<!--
+<script>
+    let obj = {"key1":"Hello_1"};
+    console.log( obj.hasOwnProperty("key1") );   //true
+    console.log( obj.hasOwnProperty("key2") );   //false
+</script>
+-->
+
+<script>
+    let obj = {
+        oracle : ()=>{ return "oracle connection soon" },
+        mysql  : ()=>{ return "mysql connection soon"},
+        mongodb : ()=>{ return "mongodb connection soon"}
+    };
+    console.log( obj.oracle(), obj.mysql(), obj.mongodb() );
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
