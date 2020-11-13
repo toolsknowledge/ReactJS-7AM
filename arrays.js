@@ -1,9 +1,6 @@
 // 9030001847
 // https://t.me/joinchat/LIyexRqMMM_tP9brgCbwGw
 
-
-
-
 //array
 //collection of indexed elements called as array
 //we can access array elements by using indexes

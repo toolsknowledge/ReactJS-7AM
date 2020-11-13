@@ -1,108 +1,76 @@
 <!--
     JSON
     ====
-        JSON Stands for Java Script Object Notation.
+        - JSON Stands for Java Script Object Notation.
 
-        JSON also called as JAvaScript Objects.
+        - JSON also called as JavaScript Objects.
 
-        JSON, used to transfer the data over the Network.
+        - JSON is used to transfer the data over the Network.
 
-        JSON is ligth weight compared to XML.
+        - JSON is ligth weigth compared to XML.
 
-        JSON Parsing(Reading) is Eazy.
+        - JSON parsing eazy compared to XML.
 
-        we can store the data in the form of a "key" & "value" pairs .
-        
-        Syntax.
-        
-        Objects ==>  {}
+        Objects ----  {}
 
-        Arrays  ==>  []
+        Arrays  ---- []
 
-        data    ==>  key & value pairs
+        data    ---- key & value pairs
 
                      key & value separated by using ":"
 
                      key & value pairs separated by using ","
-
 -->
+
+
+<!--
+<script>
+   let obj = {
+        "sub_one" : "ReactJS",
+        sub_two : "NodeJS",
+        sub_three : "MongoDB"
+   };
+   console.log( obj.sub_one, obj.sub_two, obj.sub_three );   //ReactJS NodeJS MongoDB
+   console.log( typeof(sub_one) );    //undefined
+</script>
+-->
+
 
 <!--
 <script>
     let obj = {
-        "sub_one":"ReactJS",
-        "sub_two":"NodeJS",
-        "sub_three": "MongoDB"
+        key1 : "value1",
+        key2 : "value2",
+        key3 : "value3"
     };
-    console.log( obj.sub_one,
-                 obj.sub_two,
-                 obj.sub_three );   //ReactJS NodeJS MongoDB
-</script>
--->
+    console.log( typeof key1 );    //undefined
 
-
-<!--
-<script>
-    let obj = {"key1":"Hello_1",
-                "key2":"Hello_2",
-                "key3" : "Hello_3"};
-    //ES6   for...in
     for(let key in obj){
-        if(key !="key1"){
-            console.log( key, obj[key], typeof(key) )
-        };
-    }
+             //string
+        console.log( obj[key] );
+    };
 </script>
 -->
 
 <!--
 <script>
     let obj = {
-        login : login(),
-        logout : logout(),
-        setCredentials : setCredentials(),
-        clearCredentials : clearCredentials()
+        "login" : login
     };
     function login(){
         return "welcome to login module";
     };
-    function logout(){
-        return "welcome to logout module";
-    };
-    function setCredentials(){
-        return "welcome to setCredentials module";
-    };
-    function clearCredentials(){
-        return "welcome to clearCredentials module";
-    };
-    console.log( obj.login,
-                 obj.logout,
-                 obj.setCredentials,
-                 obj.clearCredentials );
+    console.log( obj.login() );
 </script>
 -->
 
-
-
-
-<script>
-    let obj = {
-        "key1" : "value1",
-        "key2" : "value2",
-        "key3" : "value3",
-        "key4" : ()=>{ return "Hello" }
-    };
-    console.log( Object.keys(obj) );   //["key1", "key2", "key3"]
-    console.log( Object.values(obj) ); //["value1", "value2", "value3"]
-    console.log( obj.key4() );
-</script>
-
-
 <!--
 <script>
-    let obj = {"key1":"Hello_1"};
-    console.log( obj.hasOwnProperty("key1") );   //true
-    console.log( obj.hasOwnProperty("key2") );   //false
+    let key1 = "Hello_1";
+    let obj = {
+        "key1" : key1
+    };
+    console.log(obj.key1);    //Hello_1
 </script>
 -->
 
@@ -110,13 +78,92 @@
 <!--
 <script>
     let obj = {
-        oracle : ()=>{ return "oracle connection soon" },
-        mysql  : ()=>{ return "mysql connection soon"},
-        mongodb : ()=>{ return "mongodb connection soon"}
+        oracle : ()=>{ return "oracle connection soon...!" },
+        mysql  : ()=>{ return "mysql connection soon...!" },
+        mongodb : ()=>{ return "mongodb connection soon...!" },
+        couchDB : ()=>{ return "couchDB connection soon...!" }
     };
-    console.log( obj.oracle(), obj.mysql(), obj.mongodb() );
+    console.log( obj.oracle(),
+                 obj.mysql(),
+                 obj.mongodb(),
+                 obj.couchDB() );
 </script>
 -->
+
+<!--
+<script>
+   let obj = {
+        p_id : 111
+   };
+   //freeze
+   //read (allow)      write (no)     update (no)    delete (no)
+   Object.freeze(obj);
+
+   //read
+   console.log( obj );     //{p_id: 111}
+
+
+   //write
+   obj.p_name = "p_one";
+   console.log(obj);    //{p_id: 111}
+
+
+   //update
+   obj.p_id = "p101";
+   console.log( obj );     //{p_id: 111}
+
+
+   //delete
+   delete obj.p_id;
+   console.log( obj );      //{p_id: 111}
+
+</script>
+-->
+
+
+<!--
+<script>
+    let obj = {
+        "p_id":111
+    };
+    //add  p_name:"p_one"      //dont allow modifications
+    Object.defineProperty(obj,"p_name",{value:"p_one",writable:false});
+    
+    console.log(obj);    //{p_id: 111, p_name: "p_one"}
+
+    obj.p_id = "p101";
+    console.log(obj);     //{p_id: "p101", p_name: "p_one"}
+
+    obj.p_name = "product_one";
+    console.log(obj);     //{p_id: "p101", p_name: "p_one"}
+
+    delete obj.p_id;
+    console.log(obj);
+
+
+    delete obj.p_name;
+    console.log(obj);
+
+</script>
+-->
+
+
+<script>
+    let obj = {"p_id" : 111};
+
+    //p_name
+    //p_cost
+    Object.defineProperties(obj,{"p_name":{value:"p_one",writable:false},
+                                 "p_cost":{value:10000,writable:true}});
+    console.dir(obj);
+</script>
+
+
+
+
+
+
+
 
 
 
