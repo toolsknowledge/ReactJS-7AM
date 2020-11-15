@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "p_id": 111,
+      "p_name": "p_one",
+      "p_cost": 10000
+    },
+    {
+      "id": 5,
+      "p_id": 555,
+      "p_name": "p_five",
+      "p_cost": 50000
+    },
+    {
+      "id": 2,
+      "p_id": 222,
+      "p_name": "p_two",
+      "p_cost": 20000
+    },
+    {
+      "id": 4,
+      "p_id": 444,
+      "p_name": "p_four",
+      "p_cost": 40000
+    },
+    {
+      "id": 3,
+      "p_id": 333,
+      "p_name": "p_three",
+      "p_cost": 30000
+    },
+    {
+      "id": "6",
+      "p_id": "666",
+      "p_name": "p_six",
+      "p_cost": "60000"
+    }
+  ]
+}

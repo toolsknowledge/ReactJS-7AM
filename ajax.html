@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       
+    </head>
+    <body>
+
+
+        <script>
+
+            $.ajax({
+                method : "GET",
+                url : "https://www.w3schools.com/angular/customers.php",
+                success : (posRes)=>{
+                    console.log("Customers",posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            });
+
+
+            $.ajax({
+                method : "GET",
+                url : "http://localhost:3000/products",
+                success : (posRes)=>{
+                    console.log("Products.....!",posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            });
+        </script>
+
+
+        <!--
+        <script>
+            $.ajax({
+                method : "PUT",
+                url : "http://localhost:3000/products/6",
+                data : {"id":6,"p_id":666,"p_name":"p_six","p_cost":60000},
+                success : (posRes)=>{
+                    console.log(posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            })
+        </script>
+        -->
+
+
+
+        
+        <!-- <script>
+            $.ajax({
+                method : "POST",
+                url : "http://localhost:3000/products",
+                data : {"id":6,"p_id":666,"p_name":"product_six","p_cost":600000},
+                success : (posRes)=>{
+                    console.log(posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            }) 
+        </script>
+        -->
+
+
+        <!-- <script>
+            $.ajax({
+                method : "GET",
+                url : "http://localhost:3000/products",
+                success : (posRes)=>{
+                    console.log(posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            })
+        </script> -->
+
+
+
+
+        <!-- <script>
+            $.ajax({
+                method : "GET",
+                url : "http://restcountries.eu/rest/v2/all",
+                success : (posRes)=>{
+                    console.log(posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            });
+        </script> -->
+
+    </body>
+</html>

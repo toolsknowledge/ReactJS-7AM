@@ -70,6 +70,25 @@ Arrays
         - it is used to know the length of array.
 
 
+=> http://localhost:3000/products      (GET)  (5 records)
+
+=> http://localhost:3000/products?_sort=p_cost&_order=asc
+
+=> http://localhost:3000/products?_sort=id&_order=desc
+
+=> http://localhost:3000/products?_start=0&_end=3
+
+=> http://localhost:3000/products?id_gte=3
+
+=> http://localhost:3000/products?p_cost_lte=30000
+
+=> http://localhost:3000/products?id_ne=3
+
+=> http://localhost:3000/products?p_name_like=p_one
+
+=> http://localhost:3000/products?q=50000
+
+
 
 
 
