@@ -1,0 +1,142 @@
+
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+           let promise1 = new Promise((resolve,reject)=>{
+                $.ajax({
+                    method : "GET",
+                    url : "https://www.w3schools.com/angular/customers.php",
+                    success : (posRes)=>{
+                        resolve(posRes);
+                    },
+                    error : (errRes)=>{
+                        reject(errRes);
+                    }
+                });
+           });
+
+           promise1.then((posRes)=>{
+                console.log(posRes);
+           },(errRes)=>{
+                console.log(errRes);
+           });
+        </script>
+    </body>
+</html>
+-->
+
+<!--
+    we will consume promises by using then().
+
+    then() function depending on callbacks.
+
+    it's recomended avoid the usage of callbacks (callback hell).
+
+    alternative solution for then() function is "async & await" keyword.
+-->
+
+<!--
+<script>
+    function testFun(){
+        return new Promise((resolve,reject)=>{
+            resolve("Hello");
+        });
+    };
+
+    async function consume(){
+        let res = await testFun();
+        console.log(res);
+    };
+
+    consume();
+</script>
+-->
+
+
+<script>
+    function add(num){
+        return new Promise((resolve,reject)=>{
+            resolve( num+5 );
+        });
+    };
+
+    function sub(num){
+        return new Promise((resolve,reject)=>{
+            resolve(num-3);
+        })
+    };
+
+    function mul(num){
+        return new Promise((resolve,reject)=>{
+            resolve( num*2 );
+        });
+    };
+
+    function div(num){
+        return new Promise((resolve,reject)=>{
+            resolve( (num/2)-2 );
+        });
+    };
+
+        //IIFE (Immidiate Invokable Functional Execution)  (ES9)
+        (async ()=>{
+            let addRes = await add(5);
+            let subRes = await sub(addRes);
+            let mulRes = await mul(subRes);
+            let divRes = await div(mulRes);
+            console.log(divRes);
+        })();
+
+        //direct function call    (ES6)
+       async function consume (){
+        let addRes = await add(5);
+            let subRes = await sub(addRes);
+            let mulRes = await mul(subRes);
+            let divRes = await div(mulRes);
+            console.log(divRes);
+       }
+       
+       consume();       
+        
+    
+</script>
+
+
+
+<!--
+    1) what are promises ??
+
+    2) drawbacks ??
+
+    3) diff between promises and Observables ??
+
+    4) all() , allSettled() , race()
+
+    5) async & await keyword
+
+    6) consume the promises
+
+    7) then() & async & await
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -128,7 +128,7 @@
 // });
 
 
-
+/*
 let promise1 = new Promise((resolve,reject)=>{
     setTimeout(()=>{
         resolve("Hello_1");
@@ -146,6 +146,7 @@ let promise3 = new Promise((resolve,reject)=>{
         resolve("Hello_3");
     },10000);
 });
+*/
 
 
 /*
@@ -158,13 +159,13 @@ Promise.all([promise1,
 });
 */
 
-
-Promise.allSettled([promise1,promise2,promise3]).then((posRes)=>{
-    console.log(posRes);
-},(errRes)=>{
-
-});
-
+/*
+    Promise.allSettled([promise1,promise2,promise3]).then((posRes)=>{
+        console.log(posRes);
+    },(errRes)=>{
+        console.log(errRes);
+    });
+*/
 
 
 
