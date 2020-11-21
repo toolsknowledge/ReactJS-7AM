@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <div id="parent" style="width: 200px;
+                            height: 200px;
+                            border: 1px solid rgb(122, 11, 11);
+                            text-align: center;">
+        parent
+        <div id="child" style="width: 160px;
+                               height: 150px;
+                               border: 1px solid green;
+                               margin: 20px;">
+            child
+            <div id="subchild" style="width: 130px;
+                                      height: 120px;
+                                      border: 1px solid tomato;
+                                      margin-left: 15px;">
+                subchild
+            </div>
+        </div>
+    </div>
+
+    <script>
+       /*
+        //Event Bubbling
+        //propagation of events from bottom to top
+        let parent = document.getElementById("parent");
+        let child = document.getElementById("child");
+        let subchild = document.getElementById("subchild");
+
+            parent.addEventListener("click",()=>{
+                console.log("parent");
+            });
+
+            child.addEventListener("click",()=>{
+                console.log("child");
+            });
+
+            subchild.addEventListener("click",()=>{
+                console.log("subchild");
+            });
+        */
+
+
+        //Event Capturing
+        //propagation of events from top to bottom
+        let parent = document.querySelector("#parent");
+        let child = document.querySelector("#child");
+        let subchild = document.querySelector("#subchild");
+
+        parent.addEventListener("click",(event)=>{
+            console.log("parent");
+        },true);
+
+        child.addEventListener("click",(event)=>{
+            console.log("child");
+        },true);
+
+        subchild.addEventListener("click",(event)=>{
+            console.log("subchild");
+        },true);
+    </script>
+</html>
+
+
+
+
+
+
+
+

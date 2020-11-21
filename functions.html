@@ -1,0 +1,163 @@
+<!--
+    functions
+    ---------
+        - particular business logic called as function.
+        - functions are used to reuse the business logic.
+        - we have following types of functions upto ES11
+        1) Named Functions
+        2) Anonymous Functions / 
+           Arrow Functions / 
+           Fat Arrow Functions / 
+           Lamda Functions / 
+           CallBack Functions
+        3) rest parameters in functions
+        4) default parameters in functions
+        5) optional parameters in functions
+        6) generators
+        7) constructor functions
+        8) IIFE (Immidiate Invokable Functional Expressions)
+
+-->
+
+<!--
+    Named Functions
+    ---------------
+        - The function with particular name called as Named Function.
+        
+    Syntax.
+    -------
+
+    //function definition
+    function functionname(arguments){
+        //businss logic
+    };  
+
+    //call the function
+    functionname(parameters)
+-->
+
+<!--
+<script>
+    function fun_one(){
+        return "Hello";
+    };
+    console.log( fun_one );
+    console.log( fun_one() );
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(arg1,arg2,arg3){
+        console.log( arg1, arg2, arg3 );
+    };
+
+    fun_one("Angular","NodeJS","MongoDB");     //Angular NodeJS MongoDB
+    fun_one("ReactJS","NodeJS","MySQL");       //ReactJS NodeJS MySQL
+    fun_one("VueJS","NodeJS","SQLServer");     //VueJS NodeJS SQLServer
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(){
+        return fun_two;
+    };
+
+    function fun_two(){
+        return "Hello";
+    };
+
+    console.log( fun_one()() );    //Hello
+</script>
+-->
+
+
+<!--
+<script>
+    let arr = [];
+
+    function fun_one(){
+        return "Hello";
+    };
+
+    for(var i=0;i<5;i++){
+        arr.push( fun_one );
+    };
+
+    for(var j=0;j<arr.length;j++){
+        console.log( arr[j]() );
+    };
+   
+</script>
+-->
+
+
+<!--
+<script>
+    function meanStack(arg1,arg2,arg3){
+        console.log( arg1(), arg2(), arg3() );
+    };
+
+    function frontEnd(){
+        return "Angular11";
+    };
+
+    function server(){
+        return "NodeJS";
+    };
+
+    function backEnd(){
+        return "MongoDB";
+    };
+
+    meanStack( frontEnd,server,backEnd );    //Angular11 NodeJS MongoDB
+</script>
+-->
+
+
+
+<!--
+    Anonymous Functions
+    --------------------
+
+        - The function without name called as Anonymous Function.
+
+        - Anonymous functions also called as Arrow Functions/Fat Arrow Functions/Lamda Function.
+
+        - Arrow Functions introduced in ES6.
+
+        - Anonymous Functions functions behaves like Callback functions also.
+
+        - Arrow functions, we can represent by using "=>"
+
+        - Arrow Functions are Secured functions compared to Named Functions.
+
+        Syntax
+        ------
+        //function definition
+        var/let/const variablename = (argunments) => {
+            //function body
+        };
+
+        //call the function
+        variablename( parameters );
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
