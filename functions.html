@@ -122,32 +122,53 @@
 <!--
     Anonymous Functions
     --------------------
-
         - The function without name called as Anonymous Function.
 
-        - Anonymous functions also called as Arrow Functions/Fat Arrow Functions/Lamda Function.
+        - Anonymous functions also called as Arrow Functions/Fat Arrow functions/Lamda Functions/ Callback functions
 
         - Arrow Functions introduced in ES6.
 
-        - Anonymous Functions functions behaves like Callback functions also.
+        - we will represent Arrow Functions by using "=>"
 
-        - Arrow functions, we can represent by using "=>"
-
-        - Arrow Functions are Secured functions compared to Named Functions.
+        - Arrow Functions are secured functions compared to other functions
 
         Syntax
-        ------
-        //function definition
-        var/let/const variablename = (argunments) => {
-            //function body
+        ======
+        var/let/const variablename = (arguments)=>{
+            //business logic
         };
 
-        //call the function
-        variablename( parameters );
+        variablename()
+-->
+
+<!--
+<script>
+    var fun_one = ()=>{ return "Hello" };
+    console.log( fun_one );
+    console.log( fun_one() );
+</script>
 -->
 
 
+<!--
+<script>
+    var fun_one = (arg1,arg2,arg3)=>{
+        console.log( arg1, arg2, arg3 );
+    };
+    fun_one("ReactJS","NodeJS","MongoDB");    //ReactJS NodeJS MongoDB
+    fun_one("Angular","Deno","CouchDB");      //Angular Deno CouchDB
+    fun_one("VueJS","NodeJS","Firebase");     //VueJS NodeJS Firebase
+</script>
+-->
 
+<script>
+    let outer = ()=>{
+        return ()=>{
+            return "Hello";
+        };
+    };
+    console.log( outer()() );
+</script>
 
 
 
