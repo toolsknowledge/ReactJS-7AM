@@ -12,6 +12,7 @@
         4) WeakSet
 -->
 
+<!--
 <script>
     let obj = {
     };
@@ -30,7 +31,7 @@
 
     console.log(obj);
 </script>
-
+-->
 
 
 
@@ -127,6 +128,98 @@
     weakMap.set({},"Hello_1");
 </script>
 -->
+
+
+
+
+<!--
+    Set
+    ---
+        Set won't allows the duplicate values.
+-->
+
+<!--
+    <script>
+        let set = new Set();
+        console.dir(set);
+        //add()
+        //clear()
+        //Set()
+        //delete()
+        //entries(),forEach() and for...of()
+        //has()
+        //values()
+        //size
+    </script>
+-->
+
+<!--
+<script>
+    let set = new Set();
+    set.add(10)
+       .add(20)
+       .add(30)
+       .add(10)
+       .add(30)
+       .add(20)
+       .add(40);
+    console.log([...set]);    //[10, 20, 30, 40]
+</script>
+-->
+
+<!--
+<script>
+    console.log( [...new Set([10,20,30,10,20,30])] );    // [10, 20, 30]
+</script>
+-->
+
+<!--
+<script>
+    let set = new Set();
+    set.add("Hello")
+       .add(10)
+       .add(true)
+       .add([10])
+       .add({num:1})
+       .add(null)
+       .add(undefined)
+       .add(null);
+    console.log(set);
+</script>
+-->
+
+<!--
+<script>
+    let set = new Set();
+    set.add(10)
+       .add("Hello")
+       .add(20)
+       .add(true);
+    console.log( set.has(true) );     //true
+    console.log( [...set.values()] );
+    set.delete(true);
+    for(let value of set){
+        console.log(value);
+    };
+</script>
+-->
+
+<!--
+<script>
+    let weakSet = new WeakSet();
+    weakSet.add("Hello");    //Invalid value used in weak set
+</script>
+-->
+
+<script>
+    let weakSet = new WeakSet();
+    weakSet.add({num:1})
+           .add([10]);
+    console.log(weakSet);
+</script>
+
+
+
 
 
 
