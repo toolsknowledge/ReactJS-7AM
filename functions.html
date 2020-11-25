@@ -243,6 +243,7 @@
 -->
 
 
+<!--
 <script>
     function fun_one(arg1,...arg2){
         console.log(arg1,arg2);
@@ -253,6 +254,67 @@
     fun_one(10,10);                 //10 [10]
     fun_one([10],[10,20]);          //arg2[0][1]
 </script>
+-->
+
+<!--
+    Default Parameters in functions
+         - while defining the functions, parameters are initilized with default values.
+
+         - this concept also introduced in ES6
+-->
+
+
+<!--
+<script>
+    function fun_one(arg1="Angular11",
+                     arg2="NodeJS",
+                     arg3="MongoDB"){
+        console.log( arg1, arg2, arg3 );
+    };
+    fun_one();                          //Angular11 NodeJS MongoDB
+    fun_one("ReactJS");                 //ReactJS NodeJS MongoDB
+    fun_one("VueJS","Deno","CouchDB");  //VueJS Deno CouchDB
+    fun_one(undefined,"Spring Boot");   //Angular11 Spring Boot MongoDB
+    fun_one(null,null,null);            //null null null
+</script>
+-->
+
+
+<!--
+    normal parameter with default parameter
+
+<script>
+    function fun_one(arg1,arg2="Hello_2"){
+        console.log(arg1,arg2);
+    };
+    fun_one("Hello_1");             //Hello_1 Hello_2
+    fun_one(undefined,undefined);   //undefined "Hello_2"
+    fun_one(null,null);             //null null
+</script>
+-->
+
+<script>
+    //normal parameter, default parameter and rest parameter
+    function fun_one(arg1,arg2="Hello_2",...arg3){
+        console.log(arg1, arg2, arg3);
+    };
+    fun_one();          //undefined "Hello_2" []
+    fun_one("Hello_1"); //Hello_1 Hello_2 []
+    fun_one("Hello_1",
+            undefined,
+            "Hello_3"); //Hello_1 Hello_2 ["Hello_3"]
+    fun_one(undefined,
+            undefined,
+            undefined); //undefined "Hello_2" [undefined]
+    fun_one(null,
+            null,
+            null);      //null null [null]
+</script>
+
+
+
+
+
 
 
 
