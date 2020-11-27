@@ -39,6 +39,8 @@ Syllabus of JavaScript (ES6 to ES11)
 
 14) call(), apply(), bind()
 
-15) Debouncing
+15) Debouncing 
 
 16) Currying
+
+17) Throttling

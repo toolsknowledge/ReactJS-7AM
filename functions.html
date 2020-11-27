@@ -293,6 +293,7 @@
 </script>
 -->
 
+<!--
 <script>
     //normal parameter, default parameter and rest parameter
     function fun_one(arg1,arg2="Hello_2",...arg3){
@@ -310,7 +311,73 @@
             null,
             null);      //null null [null]
 </script>
+-->
 
+
+<!--
+    generators
+        - generators are used to control the flow of execution inside the function.
+
+        - generators introduced in ES9
+
+        - generator functions will prefix with "*"
+
+        - generator functions will return "cursor mechanism".
+-->
+
+<!--
+<script>
+    function *fun_one(){
+        yield "Hello_1";
+        yield "Hello_2";
+        yield "Hello_3";
+        yield "Hello_4";
+        yield "Hello_5";
+    };
+    let cursor = fun_one();
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+</script>
+-->
+
+<!--
+<script>
+    function *fun_one(){
+        yield 100;
+        yield 200;
+        yield 300;
+        yield 400;
+        return 500;
+        yield 600;
+    };
+    let cursor = fun_one();
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+</script>
+-->
+
+<script>
+    function *fun_one(){
+        yield "Hello_1";
+        yield *fun_two();
+        yield "Hello_3";
+    };
+    function *fun_two(){
+        yield "Hello_2";
+    };
+    let cursor = fun_one();
+    for(let i=0;i<3;i++){
+        console.log( cursor.next() );
+    }
+</script>
 
 
 

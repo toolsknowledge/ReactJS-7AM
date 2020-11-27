@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <button id="myid">ClickMe</button>
+    <script>
+        // document.getElementById("myid").addEventListener("click",()=>{
+        //     console.log("clicked");
+        // });
+
+        const debounce = (fn,delay)=>{
+            let timeoutID;
+           
+            return function(...args){
+                if(timeoutID){
+                    clearTimeout(timeoutID);
+                    console.log(timeoutID);
+                }
+
+                timeoutID = setTimeout(()=>{
+                    fn(...args);
+                },delay);
+                     
+            }
+        };
+
+        document.getElementById("myid").addEventListener("click",debounce(e=>{
+            console.log("clicked");
+        },2000));
+       
+    </script>
+</html>
