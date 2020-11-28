@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <button id="myid">Click Me</button>
+    <script>
+
+        const throttle = (fn,delay)=>{
+            let last = 0;
+            return function(...args){
+                let now = new Date().getTime();
+                console.log(now);
+                if(now-last<delay){
+                    console.log(now, last, delay, (now-last));
+                    return;
+                }
+                last = now;
+                return fn(...args);
+            };
+        };
+
+
+        document.getElementById("myid").addEventListener("click", throttle( (e)=>{
+            console.log("Hello");
+        },5000) );
+    </script>
+</html>
