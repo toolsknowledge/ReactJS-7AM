@@ -364,6 +364,8 @@
 </script>
 -->
 
+
+<!--
 <script>
     function *fun_one(){
         yield "Hello_1";
@@ -378,6 +380,7 @@
         console.log( cursor.next() );
     }
 </script>
+-->
 
 
 
@@ -395,8 +398,71 @@
 
 
 
+<!--
+    IIFE
+    ====
+        IIFE Stands for Immidiate Invokable Functional Expression
+
+        IIFE functions automatically invokes.
+
+        IIFE Introduced in ES9.
+
+        IIFE, also called as Self Invokable Functions.
+
+        Syntax
+        ------
+        ((arguments)=>{
+            //business logic
+        })(parameters);
+-->
+
+<!--
+<script>
+    (()=>{
+        console.log("welcome to IIFE");
+    })();
+</script>
+-->
+<!--
+<script>
+    ((arg1,arg2,arg3)=>{
+        console.log(arg1,arg2,arg3);
+    })("Angular11","NodeJS","MongoDB");    //Angular11 NodeJS MongoDB
+</script>
+-->
 
 
+
+<!--
+<script>
+    let res = ((arg1)=>{
+        return `Welcome to ${arg1}`;
+    })("NodeJS");
+    console.log(res);
+</script>
+-->
+
+<!--
+    constructor functions
+    =====================
+        - it is used to create the classes.
+
+        - constructor functions introduced in <ES6.
+
+        - we can create object to the constructor function by using "new" keyword.
+
+        - in constructor function all the members (variables & functions) initilized with "this" keyword
+-->
+<script>
+    function class_one(){
+        this.sub_one = "ReactJS";
+        this.sub_two = "NodeJS";
+        this.sub_three = "MongoDB"
+    };
+    let obj = new class_one();
+    console.log( obj.sub_one, obj.sub_two, obj.sub_three );
+    //ReactJS NodeJS MongoDB
+</script>
 
 
 
