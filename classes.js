@@ -84,9 +84,87 @@ var __extends = (this && this.__extends) || (function () {
 //3) multiple inheritance
 //4) hirarichal inheritance
 //5) hybrid inheritance
+/*
+    class class_one{
+        var_one:any = "Parent Class !!!";
+    };
+    class class_two extends class_one{
+        var_two:any = "Child Class !!!";
+    };
+    let obj1:class_one = new class_one();
+    console.log( obj1.var_one );           //Parent Class !!!
+
+    let obj2:class_two = new class_two();
+    console.log(obj2.var_one, obj2.var_two );    //Parent Class !!! Child Class !!!
+*/
+/*
+    class class_one{
+        constructor(public arg1:any){}
+    };
+    class class_two extends class_one{
+
+    };
+    let obj:class_two = new class_two("Hello");
+    console.log( obj.arg1 );     //Hello
+*/
+/*
+    class class_one{
+        arg1:any;
+        constructor(param1:any){
+            this.arg1 = param1;
+        };
+        getArg1():any{
+            return this.arg1;
+        };
+    };
+    class class_two extends class_one{
+        arg2:any;
+        constructor(param1:any,param2:any){
+            super(param2);
+            this.arg2 = param1;
+        }
+        getArg2():any{
+            return this.arg2;
+        };
+    };
+    let obj:class_two = new class_two("Hello_1","Hello_2");
+    console.log( obj.getArg1(),
+                obj.getArg2() );
+*/
+/*
+    class class_one{
+        arg1:any;
+        constructor(param1:any){
+            this.arg1 = param1;
+        };
+    };
+    class class_two extends class_one{
+        arg2:any;
+        constructor(param1:any,param2:any){
+            super(param1);
+            this.arg2 = param2;
+        };
+    };
+    class class_three extends class_two{
+        arg3:any;
+        constructor(param1:any,param2:any,param3:any){
+            super(param1,param2);
+            this.arg3 = param3;
+        };
+    };
+    let obj:class_three = new class_three("Hello_1","Hello_2","Hello_3");
+    console.log( obj.arg1, obj.arg2, obj.arg3 );   //Hello_1 Hello_2 Hello_3
+*/
+/*
+    class class_one{}
+    class class_two{}
+    class class_three extends class_one,class_two{}
+    //multiple inheritance not supported by TypeScript
+*/
+//hirarichal inheritance
 var class_one = /** @class */ (function () {
     function class_one() {
-        this.var_one = "Parent Class !!!";
+        this.arg1 = "Hello_1";
     }
     return class_one;
 }());
@@ -95,13 +173,35 @@ var class_two = /** @class */ (function (_super) {
     __extends(class_two, _super);
     function class_two() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.var_two = "Child Class !!!";
+        _this.arg2 = "Hello_2";
         return _this;
     }
     return class_two;
 }(class_one));
 ;
-var obj1 = new class_one();
-console.log(obj1.var_one);
-var obj2 = new class_two();
-console.log(obj2.var_one, obj2.var_two);
+var class_three = /** @class */ (function (_super) {
+    __extends(class_three, _super);
+    function class_three() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.arg2 = "Hello_3";
+        return _this;
+    }
+    return class_three;
+}(class_one));
+;
+var class_four = /** @class */ (function (_super) {
+    __extends(class_four, _super);
+    function class_four() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.arg2 = "Hello_4";
+        return _this;
+    }
+    return class_four;
+}(class_one));
+;
+var obj1 = new class_two();
+console.log(obj1.arg1, obj1.arg2);
+var obj2 = new class_three();
+console.log(obj2.arg1, obj2.arg2);
+var obj3 = new class_four();
+console.log(obj3.arg1, obj3.arg2);
