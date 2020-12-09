@@ -191,19 +191,180 @@
     console.log( obj3.arg1, obj3.arg2 );    //Hello_1 Hello_4
 */
 
+/*
 
-//Hybrid
+    //Hybrid
 
-class class_one{}
+    class class_one{}
 
-class class_two extends class_one{}
+    class class_two extends class_one{}
 
-class class_three extends class_one{}
+    class class_three extends class_one{}
 
-class class_four extends class_two,class_three{}
+    class class_four extends class_two,class_three{}
 
 
-//Hybrid inheritance also not supported by TypeScript
+    //Hybrid inheritance also not supported by TypeScript
+*/
+
+
+//behaves like many called as polymorphism
+//1) function overriding
+//2) function overloading
+//overriding the parent class functionality with child class functionality called as function overriding
+//we will implement function overriding with the help of inheritance
+
+/*
+    class class_one{
+        dbFun():any{
+            return "mongodb data soon...!";
+        };
+    };
+    class class_two extends class_one{
+        dbFun():any{
+            return "cassandra db data soon...!";
+        };
+    };
+    console.log( new class_two().dbFun() );    //cassandra db data soon...!
+*/
+
+
+/*
+    //function overloading
+    function add(arg1:number,arg2:number):number;
+    function add(arg1:string,arg2:string):string;
+    function add(arg1:number,arg2:string):any;
+
+    function add(arg1:any,arg2:any):any{
+        return arg1+arg2;
+    };
+    console.log( add(10,10) );                  //20
+    console.log( add("Hello_1","Hello_2") );    //Hello_1Hello_2
+    console.log( add(10,"Hello") );            //10Hello
+*/
+
+/*
+    class class_one{
+        //dbFun(arg1:string):any;
+        dbFun(arg1:any):any{
+            return `${arg1} data soon...!`
+        };
+    };
+    console.log( new class_one().dbFun("Oracle") );
+    console.log( new class_one().dbFun("MongoDB") );
+    console.log( new class_one().dbFun(100) );    //Expected 1 arguments, but got 2.
+*/
+
+
+//static
+//static members we can access by using "class names" directly
+//static members, we can't access by class "objects"
+//static members, we can't initilize "dynamically" (constructor)
+//static keyword applicable to variables & functions.
+
+/*
+    class class_one{
+        static var_one:string = "Hello";
+        static myFun():string{
+            return this.var_one;
+        };
+    };
+    console.log( class_one.var_one, class_one.myFun() );
+    //Hello Hello
+*/
+
+/*
+    class class_one{
+        static var_one:string;
+        constructor(){
+            this.var_one = "Hello";
+        };
+    };   //Property 'var_one' is a static member of type 'class_one'
+*/
+
+/*
+    class class_one{
+        static var_one:string = "Hello";
+    };
+    new class_one().var_one;    //Property 'var_one' is a static member of type 'class_one'
+*/
+
+/*
+    static class class_one{
+        static constructor(){}
+    }    //'static' modifier cannot appear on a module or namespace element.
+*/
+
+
+
+
+/*
+    //readonly
+    //readonly modifier allows us to read only data, but we can't update it
+    //we can initilize readonly members dynamically (construstors)
+    class class_one{
+        readonly data:any;
+        constructor(arg1:any){
+            this.data = arg1;
+        };
+    };
+
+    console.log( new class_one("Hello").data );
+    new class_one("Hello").data = "Welcome";      //Cannot assign to 'data' because it is a read-only property.
+*/
+
+class class_one{
+    dbFun():string{
+        return "Hello";
+    }
+    private constructor(){}
+    static myFun():any{
+        return new class_one();
+    };
+};
+console.log(  class_one.myFun().dbFun() );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

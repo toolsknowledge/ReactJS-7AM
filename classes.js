@@ -8,19 +8,6 @@
 //recomended modifier for variables is "private"
 //recomended modifier for functions is "public"
 //default modifier is "public"
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 /*
     class class_one{
         sub_one:string;
@@ -161,47 +148,150 @@ var __extends = (this && this.__extends) || (function () {
     class class_three extends class_one,class_two{}
     //multiple inheritance not supported by TypeScript
 */
-//hirarichal inheritance
+/*
+    //hirarichal inheritance
+    class class_one{
+        arg1:any="Hello_1";
+    };
+
+    class class_two extends class_one{
+        arg2:any = "Hello_2";
+    };
+
+    class class_three extends class_one{
+        arg2:any = "Hello_3";
+    };
+
+    class class_four extends class_one{
+        arg2:any = "Hello_4";
+    };
+
+    let obj1:class_two = new class_two();
+    console.log( obj1.arg1, obj1.arg2 );    //Hello_1 Hello_2
+
+    let obj2:class_three = new class_three();
+    console.log( obj2.arg1, obj2.arg2 );    //Hello_1 Hello_3
+
+
+    let obj3:class_four = new class_four();
+    console.log( obj3.arg1, obj3.arg2 );    //Hello_1 Hello_4
+*/
+/*
+
+    //Hybrid
+
+    class class_one{}
+
+    class class_two extends class_one{}
+
+    class class_three extends class_one{}
+
+    class class_four extends class_two,class_three{}
+
+
+    //Hybrid inheritance also not supported by TypeScript
+*/
+//behaves like many called as polymorphism
+//1) function overriding
+//2) function overloading
+//overriding the parent class functionality with child class functionality called as function overriding
+//we will implement function overriding with the help of inheritance
+/*
+    class class_one{
+        dbFun():any{
+            return "mongodb data soon...!";
+        };
+    };
+    class class_two extends class_one{
+        dbFun():any{
+            return "cassandra db data soon...!";
+        };
+    };
+    console.log( new class_two().dbFun() );    //cassandra db data soon...!
+*/
+/*
+    //function overloading
+    function add(arg1:number,arg2:number):number;
+    function add(arg1:string,arg2:string):string;
+    function add(arg1:number,arg2:string):any;
+
+    function add(arg1:any,arg2:any):any{
+        return arg1+arg2;
+    };
+    console.log( add(10,10) );                  //20
+    console.log( add("Hello_1","Hello_2") );    //Hello_1Hello_2
+    console.log( add(10,"Hello") );            //10Hello
+*/
+/*
+    class class_one{
+        //dbFun(arg1:string):any;
+        dbFun(arg1:any):any{
+            return `${arg1} data soon...!`
+        };
+    };
+    console.log( new class_one().dbFun("Oracle") );
+    console.log( new class_one().dbFun("MongoDB") );
+    console.log( new class_one().dbFun(100) );    //Expected 1 arguments, but got 2.
+*/
+//static
+//static members we can access by using "class names" directly
+//static members, we can't access by class "objects"
+//static members, we can't initilize "dynamically" (constructor)
+//static keyword applicable to variables & functions.
+/*
+    class class_one{
+        static var_one:string = "Hello";
+        static myFun():string{
+            return this.var_one;
+        };
+    };
+    console.log( class_one.var_one, class_one.myFun() );
+    //Hello Hello
+*/
+/*
+    class class_one{
+        static var_one:string;
+        constructor(){
+            this.var_one = "Hello";
+        };
+    };   //Property 'var_one' is a static member of type 'class_one'
+*/
+/*
+    class class_one{
+        static var_one:string = "Hello";
+    };
+    new class_one().var_one;    //Property 'var_one' is a static member of type 'class_one'
+*/
+/*
+    static class class_one{
+        static constructor(){}
+    }    //'static' modifier cannot appear on a module or namespace element.
+*/
+/*
+    //readonly
+    //readonly modifier allows us to read only data, but we can't update it
+    //we can initilize readonly members dynamically (construstors)
+    class class_one{
+        readonly data:any;
+        constructor(arg1:any){
+            this.data = arg1;
+        };
+    };
+
+    console.log( new class_one("Hello").data );
+    new class_one("Hello").data = "Welcome";      //Cannot assign to 'data' because it is a read-only property.
+*/
 var class_one = /** @class */ (function () {
     function class_one() {
-        this.arg1 = "Hello_1";
     }
+    class_one.prototype.dbFun = function () {
+        return "Hello";
+    };
+    class_one.myFun = function () {
+        return new class_one();
+    };
+    ;
     return class_one;
 }());
 ;
-var class_two = /** @class */ (function (_super) {
-    __extends(class_two, _super);
-    function class_two() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.arg2 = "Hello_2";
-        return _this;
-    }
-    return class_two;
-}(class_one));
-;
-var class_three = /** @class */ (function (_super) {
-    __extends(class_three, _super);
-    function class_three() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.arg2 = "Hello_3";
-        return _this;
-    }
-    return class_three;
-}(class_one));
-;
-var class_four = /** @class */ (function (_super) {
-    __extends(class_four, _super);
-    function class_four() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.arg2 = "Hello_4";
-        return _this;
-    }
-    return class_four;
-}(class_one));
-;
-var obj1 = new class_two();
-console.log(obj1.arg1, obj1.arg2);
-var obj2 = new class_three();
-console.log(obj2.arg1, obj2.arg2);
-var obj3 = new class_four();
-console.log(obj3.arg1, obj3.arg2);
+console.log(class_one.myFun().dbFun());
