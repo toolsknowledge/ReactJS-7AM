@@ -313,6 +313,7 @@
     new class_one("Hello").data = "Welcome";      //Cannot assign to 'data' because it is a read-only property.
 */
 
+/*
 class class_one{
     dbFun():string{
         return "Hello";
@@ -323,7 +324,7 @@ class class_one{
     };
 };
 console.log(  class_one.myFun().dbFun() );
-
+*/
 
 
 
