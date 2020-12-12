@@ -159,7 +159,7 @@ console.log( obj.fun_one() );
 //Abstarct Classes
 //Modules
 //namespaces
-//Generics
+//Generics              
 
 
 
