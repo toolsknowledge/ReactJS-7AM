@@ -1,0 +1,64 @@
+React
+=====
+
+    - React is the javascript library.
+
+    - React given by facebook.
+
+    - React categorized into following types.
+
+        1) ReactJS
+
+        2) React Native
+
+        3) React BootStrap
+
+    - ReactJS, used to develop the web applications.
+
+    - React Native used to develop the mobile applications.
+
+    - React BootStrap used to apply the Rich UI to both Web applications and mobile applications
+
+    - we will develop ReactJS applications in two ways.
+
+        1) JSX
+
+        2) TypeScript
+
+    - JSX Stands for javascript and xml.
+
+    - JSX is the not the Programming language.
+
+    - JSX won't follows the OOPS.
+
+    - TypeScript is the Programming Language.
+
+    - TypeScript introduced by microsoft.
+
+    - TypeScript follows the OOPS.
+
+    - if we develop ReactJS applications with TypeScript, automatically we are getting OOPS Benfits.
+
+    - We will save TypeScript files in ReactJS with ".tsx" extension.
+
+            => TypeScript + XML
+
+    - Babel is the tool (inbuilt tool or react library) used to convert the TypeScript to equalent javascript.
+
+    - React applications are faster compared to other frameworks because of 
+      "Virtual DOM".
+
+    - React applications are component based applications.
+
+    - ReactJS Divides the applications into multiple components, so automatically modularity increases.
+
+    - React Components are Reusable.
+
+    - As a React Developer, we can provide communiation between one component to another component.
+
+
+   
+
+    
+
+                           
