@@ -56,8 +56,49 @@ React
 
     - As a React Developer, we can provide communiation between one component to another component.
 
+Environmental Setup
+-------------------
+1) NodeJS
 
-   
+   - "npm" stands for node packaging manager
+
+   - "npm" helps to install the react software.
+
+   - "npx" stands for node packaging runner.
+
+   - "npx" helps to create the react application.
+
+website : https://nodejs.org/en/download/
+
+file    : node-v14.15.2-x64.msi
+
+
+2) Yarn tool
+
+    - Yarn tool, used to download the 3rd party libraries.
+
+
+    > npm install -g yarn
+
+    => "-g" stands for global installation
+
+3) install "create-react-app" tool
+
+    - "create-react-app" tool provided by facebook.
+
+    - "create-react-app" tool, helps to create the react application
+
+    > npm install -g create-react-app
+
+
+
+
+
+
+
+
+
+
 
     
 
