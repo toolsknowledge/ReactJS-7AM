@@ -90,6 +90,115 @@ file    : node-v14.15.2-x64.msi
 
     > npm install -g create-react-app
 
+creating the react application
+------------------------------
+1) create the directory (folder)
+    Ex.     
+          class_appliations
+2) switch to class_appliations directory
+    >  cd class_appliations
+
+3) create the react application
+
+    > npx create-react-app first-app --template typescript
+
+4) switch to react application
+
+    > cd first-app
+
+5) execute the react application
+    > yarn start
+        (or)
+    > npm start
+
+        - the default port no react application is 3000
+
+1) node_modules
+
+        - it containes libraries, and these libraries helps to execute the react application
+
+2) public/favicon.ico
+
+        - This is the default logo of react
+
+3) public/index.html
+
+        - React starts the execution from "index.html" file
+
+        - "index.html" file also called as main template
+
+4) public / logo192.png  & logo512.png
+
+    - These images helps to execute react applications in different resolutions
+
+
+5) public / manifest.json    
+
+    - configure the mobile appliction.
+
+6) public / robots.txt
+
+    - used to define teh SEO Keywords
+
+7) src
+    - used to deploy the React applications (Components)
+
+8) src/App.tsx
+       App.css
+       App.test.tsx
+
+    - above files are related to default Component
+
+    - "App" component is the default component
+
+9) src/index.css
+
+    - used to define the global styles
+
+10) src/index.tsx
+
+    - This file called as Registration file.
+
+    - All our components should register here.
+
+11) src/logo.svg
+
+    - this is the default SVG Logo of React application
+
+
+12) src/react-app-env.d.ts
+
+    - used to configure the Environmental varuables
+
+12) src/setupTests.ts
+
+    - used to write the unit test cases to react components
+
+13) package.json
+
+    - used to download the 3rd party libraries.
+
+14) tsconfig.json
+
+    - this file representing the typescript configurations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
