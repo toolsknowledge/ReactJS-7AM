@@ -1,0 +1,99 @@
+1) node_modules
+     
+      - "node_modules" containes libraries, these libraries helps to execute the react application
+
+2) public/favicon.ico
+
+    - this is default symbol of react provided by facebook.
+
+3) public/index.html
+
+    - react library starts the execution from "index.html" file
+
+    - "index.html" file called as main template.
+
+    - "index.html" file containes "dom" element(<div></div>) whose id is "root"
+
+4) public/logo192.png, logo512.png
+
+    - react provides different resolutions to execute our application in different devices
+
+5) public/manifest.json
+
+    - used to configure the mobile application developments.
+
+6) public/robots.txt
+
+    - used to define the search engine keywords.
+
+7) src
+
+    - used to deploy the components
+
+8) src/App.tsx       (Component)
+       App.test.tsx  (Testing)
+       App.css       (Style Sheet)
+
+    - default Component of React
+
+9) src/index.css
+
+    - used to define the global styles.
+
+    - These styles appliable to entire react application.
+
+10) src/index.tsx
+
+    - used to register the Components.
+
+
+11) src/logo.svg
+
+    - representing default "svg" logo of reactjs
+
+
+12) src/react-app-env.d.ts
+
+    - used to define the react application environmental variable
+
+13) src/setupTests.ts
+
+    - helps to write the unit test cases to react application
+
+
+14) package.json
+
+    - used to download the libraries.
+
+
+Component
+---------
+
+    - React application is collabration of Components.
+
+    - As a React Developer, we can create more than one Component.
+
+    - As a React Developer, we can provide communication between one component to another component.
+
+    - React supports two types of components
+
+            1) Functional Level Component    (stateless component)
+
+            2) class level component         (statefull component)
+
+
+Functional Components
+---------------------
+
+    - simple "function" behaves like component.
+
+    - "React" is the predefined "class" provides the "component" environment.
+
+**********************************************
+demo-app
+       src
+         First.tsx
+
+         index.tsx
+*********************************************
+
