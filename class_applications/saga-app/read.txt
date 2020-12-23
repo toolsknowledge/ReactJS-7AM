@@ -1,0 +1,103 @@
+Saga Middleware Project
+-----------------------
+
+    - Saga Middleware used to manipulate the original requests.
+
+Step 1.
+    create the react application
+
+    > npx create-react-app saga-app --template typescript
+
+        - where "saga-app" is the react application
+
+Step 2.
+    switch to saga application
+
+        > cd saga-app
+
+Step 3.
+    download the modules.
+
+    => redux                    @types/redux
+
+    => react-redux              @types/react-redux
+
+    => redux-saga               @types/redux-saga
+
+        - redux module used to create the "redux architecture".
+
+        - react-redux used to integrate the redux architecture to react application.
+
+        - redux-saga used to manipulate the dispatches
+
+    > yarn add redux react-redux redux-saga @types/redux @types/react-redux @types/redux-saga --save
+
+
+Step 4.
+
+    create the actions
+
+    ****************************************************
+    saga-app
+           src
+             sagas
+                saga.tsx
+    ****************************************************
+
+
+Step 5.
+    create the reducer
+
+    ******************************************************
+    saga-app
+          src
+            reducer
+               reducer.tsx
+    *****************************************************
+
+
+Step 6.
+    create the "store" and deploy the "reducer" and make the availability to "App" component
+
+
+    index.tsx
+
+Step 7.
+    create the Component
+
+    App.tsx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
