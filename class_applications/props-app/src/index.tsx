@@ -4,11 +4,16 @@ import './index.css';
 import App from './App';
 import {First} from "./First";
 import {Comp1} from "./Comp1";
+import Test1 from "./Test1";
+
+import {ParentComp} from "./ParentComp";
+
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Comp1 />
+    <ParentComp />
   </React.StrictMode>,
   document.getElementById('root')
 );

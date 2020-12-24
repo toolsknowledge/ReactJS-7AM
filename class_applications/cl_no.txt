@@ -97,3 +97,35 @@ demo-app
          index.tsx
 *********************************************
 
+Props
+-----
+    - "props" is the predefined object in react library.
+
+    - "props" objet used to receive the data from parent component.
+
+*********************************************
+props-app
+       src
+         ParentComp.tsx
+         ChildComp.tsx        (props object)
+        
+         index.tsx
+*********************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
