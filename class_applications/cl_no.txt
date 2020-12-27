@@ -113,8 +113,24 @@ props-app
 *********************************************
 
 
+state
+-----
+    - state is the predefined object in "ReactJS".
+
+    - state used to "store" the component data.
+
+    - we will define state by using "useState()" function
+
+    - useState() called as hook.
 
 
+*********************************************************
+state-app
+        src
+          State.tsx
+
+          index.tsx
+*********************************************************
 
 
 
