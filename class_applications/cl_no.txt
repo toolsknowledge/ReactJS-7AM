@@ -133,6 +133,69 @@ state-app
 *********************************************************
 
 
+                                                ****** State Management ******
+
+        - we can implement state Management applications by using "redux" library.
+
+1) store
+
+        - main application container called as store.
+
+        - store accomidates the initialstate, reducer, state.
+
+
+2) initialstate
+
+        - application default value called as initialstate.
+
+
+3) reducer
+
+        - business logic called as reducer.
+
+        - we must deploy reducer to store.
+
+
+4) state
+
+        - application(reducer) output called as state.
+
+5) dispatch
+
+        - requesting the store called as dispatch.
+
+        - dispatch containes actions... and values.....
+
+6) action
+
+        - application requirement called as action.
+
+
+7) values/payload
+
+        - application(reducer) input data called as payload
+
+
+8) subscribe
+
+        - receiving response from store to client called as subscribe.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
