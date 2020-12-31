@@ -133,6 +133,27 @@ state-app
 *********************************************************
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                 ****** State Management ******
 
         - we can implement state Management applications by using "redux" library.
@@ -179,6 +200,192 @@ state-app
 8) subscribe
 
         - receiving response from store to client called as subscribe.
+
+
+
+
+                                    ****** React Redux Example ******
+
+step 1.
+    create the react application
+
+    > npx create-react-app react-redux-ex --template typescript
+
+step 2.
+    switch to react application
+
+    > cd react-redux-ex
+
+step 3.
+    download the libraries
+
+        => redux
+
+        => react-redux
+
+
+    - redux library used to implement the redux architecture.
+
+    - react-redux used to integrate the redux to react application
+
+    > yarn add redux @types/redux react-redux @types/react-redux --save
+
+
+step 4.
+    create the reducer
+
+    ******************************************
+    react-redux-ex
+                 src
+                   reducer
+                      reducer.tsx
+    *****************************************
+
+
+step 5.
+    create the "store"
+
+    deploy the "reducer" to "store"
+
+    make the availability of "store" to "App" component
+
+    index.tsx
+
+step 6.
+    perform dispatch and subscribe from App component.
+
+    App.tsx
+
+
+
+Step 1.
+======
+    create the react example
+
+            > npx create-react-app redux-ex1 --template typescript
+
+
+Step 2.
+======
+    switch to react application
+
+    > cd redux-ex1
+
+Step 3.
+======
+    download libraries
+
+    @redux
+    @react-redux
+
+    - redux used to create the redux architecture
+
+    - react-redux used to integrate the redux to react application
+
+    > yarn add redux @types/redux react-redux @types/react-redux --save
+
+
+
+step 4.
+=======
+    create the reducer
+
+*****************************************************************
+redux-ex1
+        src
+          reducer
+              reducer.tsx
+*****************************************************************    
+
+step 5.
+=======
+    create the store, and deploy the reducer and make store availability to "App" component
+
+    index.tsx
+
+
+step 6.
+    perform subscribe and dispatch operations
+
+    App.tsx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
