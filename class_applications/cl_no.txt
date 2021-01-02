@@ -322,6 +322,129 @@ step 6.
 
 
 
+                                    ***** Thunk Middleware *****
+
+    - Thunk Middleware used to "separate and moniter" the actions.
+
+    - we will download thunk Middleware with the help of yarn tool or npm tool.
+
+            > yarn add redux-thunk -save
+
+Step 1.
+    create the react application
+
+            > npx create-react-app thunk-app
+
+
+Step 2.
+    download the modules
+
+            > redux
+
+            > react-redux
+
+            > redux-thunk
+
+
+        - redux used to implement the redux architecture.
+
+        - react-redux used to integrate the redux to react application.
+
+        - redux-thunk used to separate and moniter the actions.
+
+        > yarn add redux react-redux redux-thunk --save
+
+
+
+step 3.
+        create the reducer
+
+        *********************************************
+        thunk-app
+                src
+                  reducer
+                      reducer.js
+        ********************************************
+
+step 4.
+
+    create the actions
+
+    ***********************************************
+    thunk-app
+            src
+              actions
+                   actions.js
+    **********************************************
+
+    withdrawAsync() and depositAsync() these two functions are important functions.
+
+
+Step 5.
+    create the store, and deploy the reducer and make the availability of store to App component
+
+    index.js
+
+Step 6.
+    create the App Component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
