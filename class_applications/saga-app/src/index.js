@@ -5,16 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import reducer from "./reducer/reducer";
-import { Provider } from "react-redux";
 import { createStore,applyMiddleware } from "redux";
+import { Provider } from "react-redux";
 import createSagaMiddleware from "redux-saga";
-import { withdraw } from "./sagas/saga";
+import {withdraw} from "./saga/saga";
 
 const sagaMiddleware = createSagaMiddleware();
-
 const store = createStore(reducer,applyMiddleware(sagaMiddleware));
 sagaMiddleware.run(withdraw);
-
 
 ReactDOM.render(
   <Provider store={store}>

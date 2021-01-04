@@ -388,6 +388,168 @@ Step 5.
 Step 6.
     create the App Component
 
+                            ***** Saga Middleware *****
+
+        - saga middleware, used to manipulate the actions.
+
+        - we will download saga middleware by using "yarn" tool.
+
+                > yarn add redux-saga --save
+
+
+step 1.
+    create the react application
+
+        > npx create-react-app saga-app
+
+            - where "saga-app" is the name of the react application.
+
+step 2.
+    switch to react application
+
+        > cd saga-app
+
+step 3.
+    download the node modules
+
+        => redux
+
+        => react-redux
+
+        => redux-saga
+
+        > yarn add redux react-redux redux-saga --save
+
+
+step 4.
+    create the reducer
+
+    ****************************************************
+    saga-app
+          src
+            reducer
+                reducer.js
+    ***************************************************
+
+
+step 5.
+
+    create the saga middleware
+
+    ***************************************************
+    saga-app
+           src
+             saga
+               saga.js
+    ***************************************************
+
+
+step 6.
+    create the "store", and deploy the "reducer with saga" middleware and make the availability to "App" component
+
+    index.js
+
+Step 7.
+    create the Component
+
+    App.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
