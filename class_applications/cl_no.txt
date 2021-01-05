@@ -456,6 +456,85 @@ Step 7.
 
 
 
+                            ***** Saga Middleware with axios module ******
+                    
+1) create the react application
+
+    > npx create-react-app crud-app
+
+2) switch to application
+
+    > cd crud-app
+
+3) download the node modules
+
+        => redux
+
+        => reat-redux
+
+        => redux-saga
+
+        => axios
+
+
+
+4) create the action
+
+*******************************************
+crud-app
+      src
+       actions
+          actions.js
+******************************************
+
+5) create the reducer
+
+*************************************************
+crud-app
+       src
+         reducer
+            reducer.js
+*************************************************
+
+6) create the store, deploy the "reducer with saga" and make the availability of store to App component
+
+Ex.
+    index.js
+
+
+7) create the App Component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
