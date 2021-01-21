@@ -1,0 +1,60 @@
+1) create the react application
+
+    > npx create-react-app front-end --template typescript
+
+2) switch to react application
+
+    > cd front-end
+
+3) download react modules suitable to typescript environemnt
+
+        => redux @types/redux
+
+        => react-redux   @types/react-redux
+
+        => redux-thunk    @types/redux-thunk
+
+        => axios   @types/axios
+
+
+        > yarn add redux @types/redux react-redux   @types/react-redux redux-thunk    @types/redux-thunk axios   @types/axios --save
+
+
+4) create the actions to Components
+
+            => HomeScreen
+
+            => ProductScreen
+
+            => CartScreen
+
+        *************************************************************
+        front-end
+                src
+                  actions
+                      home.action.ts
+                      product.action.ts
+                      cart.action.ts
+        ************************************************************
+
+5) create the reducers
+
+        ************************************************************
+        front-end
+                src
+                  reducers
+                      
+                      home.state.ts  (initialstate) (interfaces)
+                      product.state.ts
+                      cart.state.ts
+
+                      home.reducer.ts
+                      product.reducer.ts
+                      cart.reducer.ts
+        *************************************************************
+
+       
+
+
+                      
+
