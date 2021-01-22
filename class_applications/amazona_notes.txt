@@ -1,60 +1,59 @@
-1) create the react application
+1) download modules
 
-    > npx create-react-app front-end --template typescript
+        > yarn add redux react-redux redux-thunk @types/redux @types/react-redux @types/redux-thunk axios --save
 
-2) switch to react application
+2) create the model object
 
-    > cd front-end
+    ****************************************************
+    front-end
+            src
+              model
+                 product.ts
+    ***************************************************
 
-3) download react modules suitable to typescript environemnt
+3) implement the actions
 
-        => redux @types/redux
-
-        => react-redux   @types/react-redux
-
-        => redux-thunk    @types/redux-thunk
-
-        => axios   @types/axios
-
-
-        > yarn add redux @types/redux react-redux   @types/react-redux redux-thunk    @types/redux-thunk axios   @types/axios --save
-
-
-4) create the actions to Components
-
-            => HomeScreen
-
-            => ProductScreen
-
-            => CartScreen
-
-        *************************************************************
-        front-end
-                src
-                  actions
-                      home.action.ts
-                      product.action.ts
-                      cart.action.ts
-        ************************************************************
-
-5) create the reducers
-
-        ************************************************************
-        front-end
-                src
-                  reducers
-                      
-                      home.state.ts  (initialstate) (interfaces)
-                      product.state.ts
-                      cart.state.ts
-
-                      home.reducer.ts
-                      product.reducer.ts
-                      cart.reducer.ts
-        *************************************************************
-
-       
+    *******************************************************
+    front-end   
+           src
+             actions
+                 ProductActionTypes.ts      (Requirement)
+                 ProductAction.ts           (Implementaion)
+    ********************************************************
 
 
-                      
+
+
+4) implement the reducer
+
+
+5) create the store
+
+        index.tsx
+
+
+6) create the HomeScreen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    **************************************************************
+    front-end
+            src
+              reducer
+                  product.ts
+    **************************************************************
+
+
 

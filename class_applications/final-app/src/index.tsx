@@ -4,13 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import {ageReducer} from "./agereducer";
-import {createStore,applyMiddleware} from "redux"; 
-import {Provider} from "react-redux";
+import { createStore,applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import productReducer from "./reducer/ProductReducer";
 import thunk from "redux-thunk";
-const store:any = createStore(ageReducer,applyMiddleware(thunk));
 
-
+const store = createStore(productReducer,applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>

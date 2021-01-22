@@ -1,5 +1,5 @@
 {
-  "name": "front-end-ts",
+  "name": "final-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,7 @@
     "@types/react-redux": "^7.1.15",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
+    "axios": "^0.21.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
