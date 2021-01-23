@@ -35,6 +35,28 @@
 6) create the HomeScreen
 
 
+ProductScreen
+=============
+front-end
+        src
+          modal
+             detail.ts
+
+          action
+                DetailActionTypes.ts
+                DetailAction.ts
+            
+          reducer
+                detail.ts
+          screens
+              ProductScreen.ts
+
+        => http://localhost:8080/api/products/productID
+
+
+
+
+
 
 
 

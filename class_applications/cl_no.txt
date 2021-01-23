@@ -505,6 +505,28 @@ Ex.
 7) create the App Component
 
 
+***************************************************************
+ProductScreen
+
+    => http://localhost:8080/api/products/productID
+
+
+    front-end
+            src
+              modal
+                  
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
