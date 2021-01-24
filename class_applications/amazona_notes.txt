@@ -54,6 +54,30 @@ front-end
         => http://localhost:8080/api/products/productID
 
 
+CartScreen
+==========
+
+*********************************************************
+front-end
+        src
+          modal
+             cart.modal.ts
+          action
+             cartActionTypes.ts
+             cartAction.ts
+
+          reducer
+            cart.reducer.ts
+
+          screens
+            CartScreen.ts
+********************************************************
+
+
+
+
+
+
 
 
 
