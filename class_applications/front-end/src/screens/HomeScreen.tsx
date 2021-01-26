@@ -1,6 +1,9 @@
 import React from "react";
 import * as actions from "../action/ProductAction";
 import { connect } from "react-redux";
+import { LoadingBox } from "../components/LoadingBox";
+import { MessageBox } from "../components/MessageBox";
+import { Rating } from "../components/Rating";
 interface IProps{
     fun_one:any;
     my_state:any;
@@ -19,6 +22,9 @@ class HomeScreen extends React.Component<IProps,IState>{
         return(
             <div>
                 {JSON.stringify(this.props.my_state)}
+                <LoadingBox></LoadingBox>
+                <MessageBox variant={"info"}>Error</MessageBox>
+                <Rating rating={1} numReviews={10}></Rating> 
             </div>
         )
     };
