@@ -3,7 +3,9 @@ import * as actions from "../action/ProductAction";
 import { connect } from "react-redux";
 import { LoadingBox } from "../components/LoadingBox";
 import { MessageBox } from "../components/MessageBox";
-import { Rating } from "../components/Rating";
+
+import Product from "../components/Product";
+
 interface IProps{
     fun_one:any;
     my_state:any;
@@ -19,13 +21,13 @@ class HomeScreen extends React.Component<IProps,IState>{
         this.props.fun_one();
     };
     render(){
+        const {loading,products,error} = this.props.my_state;
         return(
-            <div>
-                {JSON.stringify(this.props.my_state)}
-                <LoadingBox></LoadingBox>
-                <MessageBox variant={"info"}>Error</MessageBox>
-                <Rating rating={1} numReviews={10}></Rating> 
-            </div>
+            <React.Fragment>
+                 {!loading ? (<LoadingBox></LoadingBox>) : 
+                  error === "Network Error" ? (<MessageBox variant="danger">{error}</MessageBox>) :
+                  (<Product arr={products}></Product>)} 
+            </React.Fragment>
         )
     };
 };

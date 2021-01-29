@@ -1,63 +1,26 @@
-/*
-
-  import React from 'react';
-
-  import './App.css';
-  import HomeScreen from './screens/HomeScreen';
-  import ProductScreen from './screens/ProductScreen';
-
-  function App() {
-    return (
-      // <div className="class_one">
-      //    <HomeScreen></HomeScreen>
-      // </div>
-
-      <div className="grid-container">
-          <header className="row">
-              <div>
-                <a href="#" className="brand">AshokIT</a>
-              </div>
-
-              <div>
-                  <a href="#">Cart</a>
-                  <a href="#">SingIn</a>
-              </div>
-          </header>
-
-          <main>
-              <HomeScreen></HomeScreen>
-          </main>
-
-          <footer className="row center">
-                All Rights Are Reserved
-          </footer>
-      </div>
-      
-    );
-  }
-
-  export default App;
-*/
-
 import React from "react";
 import HomeScreen from "./screens/HomeScreen";
+import { BrowserRouter as Router,NavLink, Route } from "react-router-dom";
+import ProductScreen from "./screens/ProductScreen";
 
 function App(){
     return(
+      <Router>
         <div className="grid-container">
            
            <header className="row">
               <div>
-                 <a href="#" className="brand">AshokIT</a>
+                 <NavLink to="/" className="brand" exact strict>AshokIT</NavLink>
               </div>
               <div>
-                 <a href="#">Cart</a>
-                 <a href="#">SignIn</a>
+                 <NavLink to="/cart" exact strict>Cart</NavLink>
+                 <NavLink to="/signin" exact strict>SignIn</NavLink>
               </div>
            </header>
 
            <main>
-              <HomeScreen></HomeScreen>
+               <Route path="/" component={HomeScreen} exact strict></Route>
+               <Route path="/product/:productID" component={ProductScreen} exact strict></Route>
            </main>
 
            <footer className="row center">
@@ -65,6 +28,7 @@ function App(){
            </footer>
 
         </div>
+      </Router>
     )
 };
 
