@@ -9,7 +9,7 @@ export const getDetailedProduct = (productID:any)=>{
                       error:"",
                       product:{"_id":"","brand":"",category:"",description:"",countInStock:0,image:"",numReviews:0,name:"",price:0,rating:0}})        
             try{
-                const res = await axios.get(`http://localhost:8080/api/products/${productID}`);
+                const res = await axios.get(`http://ecommercebackend-env.eba-nn2xysds.ap-south-1.elasticbeanstalk.com/api/products/${productID}`);
                 const {data} = res;
                 console.log(data);
                 dispatch({type:LODAING_PRODUCT_ID_SUCCESS,

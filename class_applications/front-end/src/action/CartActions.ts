@@ -9,7 +9,7 @@ export const getCartDetails = (productID:string,qty:number)=>{
                   error:"",
                   itemsInCart:{"name":"",countInStock:0,"_id":"",image:"",price:0}});
         try{
-            const res = await axios.get(`http://localhost:8080/api/products/${productID}`);
+            const res = await axios.get(`http://ecommercebackend-env.eba-nn2xysds.ap-south-1.elasticbeanstalk.com/api/products/${productID}`);
             const {data} = res;
             dispatch({
                 type:CART_ITEMS_LOADING_SUCCESS,
