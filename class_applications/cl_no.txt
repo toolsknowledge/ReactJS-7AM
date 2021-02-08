@@ -514,289 +514,49 @@ ProductScreen
     front-end
             src
               modal
-                  
 
 
 
+                                    ***** AWS Deploy *****
 
+1) create the s3 bucket
 
+        Ex.
+                ashokit-react-class-ex
 
 
+2) enable staic web hosting
 
+        Ex.
+                index.html
 
 
+3) edit the bucket policy
 
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "PublicReadGetObject",
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": "s3:GetObject",
+                "Resource": "arn:aws:s3:::ashokit-react-class-ex/*"
+            }
+        ]
+    }
 
+4) edit the package.json file
 
+    "deploy": "aws s3 cp --recursive ./build s3://ashokit-react-class-ex"
 
+    add above entry under "scripts"
 
+5) run the following command.
 
+    > npm run build
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    > npm run deploy
 
 
 

@@ -1,0 +1,13 @@
+**************************************************************************
+front-end
+        src
+          controls
+             Input.tsx    ===>    (fname, lname,mobile,email,upwd)
+
+             Controls.tsx    (json)
+
+             useForm.tsx          (validations)
+
+        screens
+            Registration.tsx
+*****************************************************************************

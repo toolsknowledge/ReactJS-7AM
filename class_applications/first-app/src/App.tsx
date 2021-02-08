@@ -4,9 +4,6 @@ const App = (props:any)=>{
     <div>
       Hello
     </div>
-    <div>
-      Welcome
-    </div>
   )
 }
 export default App;
