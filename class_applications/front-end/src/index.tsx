@@ -10,10 +10,12 @@ import productReducer from "./reducer/product";
 import thunk from "redux-thunk";
 import detailReducer from "./reducer/detail";
 import Registration from "./screens/Registration";
+import registrationReducer from './reducer/registration';
 
 const rootReducer = combineReducers({
   products:productReducer,
-  detail:detailReducer
+  detail:detailReducer,
+  registration:registrationReducer
 });
 
 const store = createStore(rootReducer,applyMiddleware(thunk));
